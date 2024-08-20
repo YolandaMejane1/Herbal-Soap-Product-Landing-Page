@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herbal Soap Shop</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=FontName:wght@weight&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
@@ -15,7 +14,7 @@
             <a href="#shop-now" class="close-button">&times;</a>
             <h2>Discover Our Luxurious Soaps!</h2>
             <p>Experience the ultimate in skin care with our handcrafted, all-natural soaps. Perfect for pampering yourself or as a thoughtful gift.</p>
-            <a href="#shop-now" class="cta-button">Shop Now</a>
+            <a href="#" class="cta-button">Shop Now</a>
         </div>
     </div>
     <header class="header-1">
@@ -100,7 +99,7 @@
                 <p><a href="#">Turmeric-Glow-Getter for R102</a></p>
             </div>
             <div class="image-item">
-                <img src="https://as2.ftcdn.net/v2/jpg/08/85/75/97/1000_F_885759740_Jhoa1ee3aw8CQJz9SIoQuUfM5UslPqGp.jpg" alt="Image 4">
+                <img src="https://t3.ftcdn.net/jpg/00/30/81/52/240_F_30815296_Ntyr3KFQS0ppQASPCmiWZdheQsUHxkyA.jpg" alt="Image 4">
                 <p><a href="#">Sunlight-Hypoallergenic-Baby for R45</a></p>
             </div>
         </div>
@@ -145,17 +144,17 @@
                     <h2>Contact Us</h2>
                 </div>
                 <form class="form-content" action="/submit_form" method="post">
-                    <label class="form-label"><b>Name</b></label>
-                    <input class="form-input" name="name" type="text" required>
-        
-                    <label class="form-label"><b>Email</b></label>
-                    <input class="form-input" name="email" type="email" required>
-        
-                    <label class="form-label"><b>Message</b></label>
-                    <textarea class="form-input" name="message" rows="5" required></textarea>
-        
+                    <label class="form-label" for="name"><b>Name</b></label>
+                    <input class="form-input" id="name" name="name" type="text" required autocomplete="name">
+                    
+                    <label class="form-label" for="email"><b>Email</b></label>
+                    <input class="form-input" id="email" name="email" type="email" required autocomplete="email">
+                    
+                    <label class="form-label" for="message"><b>Message</b></label>
+                    <textarea class="form-input" id="message" name="message" rows="5" required autocomplete="off"></textarea>
+                    
                     <button class="form-button" type="submit">Submit</button>
-                </form>
+                </form>                
             </div>
         </div>
     </div>

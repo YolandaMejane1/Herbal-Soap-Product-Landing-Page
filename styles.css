@@ -146,7 +146,7 @@ body {
 
 .dropdown-menu ul li {
     position: relative;
-    margin: 0 15px;
+    margin: 5px 15px;
 }
 
 .dropdown-menu ul li a {
@@ -168,7 +168,7 @@ body {
     background-color: rgb(14, 14, 14);
     transform: scaleX(0);
     transform-origin: bottom right;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .dropdown-menu ul li a:hover::after {
@@ -179,10 +179,10 @@ body {
 
 .dropdown-menu ul li ul.dropdown {
     position: absolute;
-    top: 40px;
+    top: 34px;
     left: 0;
     background-color: #efd9fa;
-    padding: 0;
+    padding-top: 10px;
     list-style-type: none;
     display: none;
     max-width: 60vw;
@@ -257,39 +257,44 @@ button:hover {
     background-color: #e4cde4;
 }
 
-
 section {
     display: relative;
     text-align: center;
+    align-items: center;
     height: 58vh;
     margin-top: -30px;
     background-color: rgb(244, 210, 244);
+    padding: 10px;
 }
+
+section h2 {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    font-weight: 350;
+    font-size: 36px;
+    z-index: 5;
+}
+
 .image-grid {
-    position:relative;
-    left: 0px;
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 300px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     padding: 20px;
-    width: 100vh;
-    align-items: center;
+    box-sizing: border-box; /* Ensure padding does not cause overflow */
+    max-width: 100%; /* Prevent overflow beyond the viewport width */
+    margin: 0 auto; /* Center the grid container */
+    text-align: center;
 }
 
 .image-grid img {
     width: 100%;
     height: auto;
     display: block;
+    box-sizing: border-box; /* Ensure padding or border does not cause overflow */
 }
 
-
-section h2 {
-    position: relative;
-    top: 15px;
-    font-weight: 350;
-    font-size: 36px;
-    z-index: 5;
-}
 
 .about-us-section {
     display: flex;
@@ -347,18 +352,14 @@ section h2 {
     gap: 0px;
     padding: 0;
     height: 70vh;
-    align-items: left;
+    align-items: center;
     justify-items: center;
     margin-bottom: 50px;
 }
 
-.testimonial {
-    text-align: center;
-}
-
 .testimonial-img {
     width: 150px;
-    height: 150px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 5px;
@@ -376,6 +377,7 @@ section h2 {
     width: 100vw;
     background-color: rgb(251, 221, 252);
     z-index: 10;
+    
 }
 
 .last-section h1{
@@ -388,6 +390,7 @@ section h2 {
     font-style:italic;
     font-weight: 300;
     z-index: 20;
+    margin-bottom: 20px;
 
 }
 
@@ -448,7 +451,6 @@ section h2 {
 .form-button {
     position: relative;
     top: 20px;
-    left: 80px;
     width: 60%;
     padding: 12px;
     background-color: rgba(204, 149, 252, 0.8);
@@ -504,24 +506,27 @@ section h2 {
 
 @media (max-width: 480px) {
     .header-1 h1 {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .header-1 nav a {
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .header-2 h1 {
-        font-size: 28px;
+        position: absolute;
+        left: 7px;
+        font-size: 16px;
+        text-align: left;
     }
 
     .dropdown-menu ul li a {
-        font-size: 16px;
-        padding: 8px 20px;
+        font-size: 12px;
+        padding: 4px 10px;
     }
 
     .search-wrapper input[type="search"] {
-        width: 200px;
+        width: 160px;
     }
 
     .image-grid {
@@ -530,37 +535,35 @@ section h2 {
     }
 
     .about-us-text {
-        font-size: 18px;
-        padding: 10px;
+        font-size: 14px;
+        padding: 6px;
     }
 
     .testimonies-heading {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .testimonials-section {
         grid-template-columns: repeat(1, 1fr);
-        height: auto;
     }
 
     .testimonial-img {
-        width: 100px;
-        height: 100px;
+        width: 60px;
+        height: 60px;
     }
 
     .last-section h1 {
-        font-size: 28px;
-        padding-left: 20px;
+        font-size: 20px;
+        padding-left: 10px;
     }
 
     .form-container {
-        top: -400px;
-        padding: 20px;
+        padding: 10px;
     }
 
     .form-button {
-        width: 80%;
-        left: 10%;
+        width: 90%;
+        margin: 0 auto;
     }
 
     .footer {
@@ -569,34 +572,34 @@ section h2 {
     }
 
     .footer-content h2 {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .footer-content p {
-        font-size: 14px;
+        font-size: 10px;
     }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
     .header-1 h1 {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .header-1 nav a {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .header-2 h1 {
-        font-size: 32px;
+        font-size: 24px;
     }
 
     .dropdown-menu ul li a {
-        font-size: 18px;
-        padding: 10px 30px;
+        font-size: 14px;
+        padding: 6px 15px;
     }
 
     .search-wrapper input[type="search"] {
-        width: 230px;
+        width: 180px;
     }
 
     .image-grid {
@@ -605,37 +608,35 @@ section h2 {
     }
 
     .about-us-text {
-        font-size: 20px;
-        padding: 15px;
+        font-size: 16px;
+        padding: 8px;
     }
 
     .testimonies-heading {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .testimonials-section {
         grid-template-columns: repeat(2, 1fr);
-        height: auto;
     }
 
     .testimonial-img {
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
     }
 
     .last-section h1 {
-        font-size: 32px;
-        padding-left: 30px;
+        font-size: 24px;
+        padding-left: 15px;
     }
 
     .form-container {
-        top: -500px;
-        padding: 25px;
+        padding: 15px;
     }
 
     .form-button {
-        width: 70%;
-        left: 15%;
+        width: 85%;
+        margin: 0 auto;
     }
 
     .footer {
@@ -644,11 +645,11 @@ section h2 {
     }
 
     .footer-content h2 {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .footer-content p {
-        font-size: 15px;
+        font-size: 12px;
     }
 }
 
@@ -662,28 +663,29 @@ section h2 {
     }
 
     .header-2 h1 {
-        font-size: 38px;
+        font-size: 32px;
     }
 
     .dropdown-menu ul li a {
-        font-size: 18px;
-        padding: 10px 40px;
+        font-size: 16px;
+        padding: 8px 20px;
     }
 
     .search-wrapper input[type="search"] {
-        width: 250px;
+        width: 230px;
     }
 
     .image-grid {
-        grid-template-columns: repeat(4, 300px);
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
     }
 
     .about-us-text {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .testimonies-heading {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .testimonials-section {
@@ -691,22 +693,21 @@ section h2 {
     }
 
     .testimonial-img {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
 
     .last-section h1 {
-        font-size: 38px;
+        font-size: 34px;
     }
 
     .form-container {
-        top: -650px;
-        padding: 30px;
+        padding: 20px;
     }
 
     .form-button {
-        width: 60%;
-        left: 80px;
+        width: 70%;
+        margin: 0 auto;
     }
 
     .footer {
@@ -715,10 +716,10 @@ section h2 {
     }
 
     .footer-content h2 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .footer-content p {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
